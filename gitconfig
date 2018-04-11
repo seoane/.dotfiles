@@ -1,5 +1,11 @@
+#Source https://github.com/Skardian/.dotfiles/
 [alias]
-  co = checkout
+  co  = checkout
+  ch    = !$EDITOR $(git diff --name-only) ; Edit changed files
+  prb = pull --rebase
+  t   = log --graph --pretty=format:'%C(yellow)%h%Creset%C(auto)%d%Creset %s %Cgreen(%cr)%Creset %C(bold blue)<%an>%Creset' --abbrev-commit --all
+  tb    = log --graph --pretty=format:'%C(yellow)%h%Creset%C(auto)%d%Creset %s %Cgreen(%cr)%Creset %C(bold blue)<%an>%Creset' --abbrev-commit --first-parent
+  who   = shortlog -sn
 [core]
   editor = vim
     excludesfile = ~/.gitignore
