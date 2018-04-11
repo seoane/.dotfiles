@@ -1,0 +1,11 @@
+# Movement alias
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+
+# Rerunners
+alias doh='sudo -E $(fc -ln -1)'
+
+# List
+alias ls='ls -lahtr --color=auto'
