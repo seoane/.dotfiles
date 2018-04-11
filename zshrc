@@ -2,7 +2,6 @@
 
 # ZSH Installation path
 export ZSH="$HOME/.oh-my-zsh"
-export CUSTOM_ZSH="$HOME/.oh-my-zsh"
 
 # Set zsh theme
 ZSH_THEME="suso"
@@ -30,6 +29,7 @@ ZSH_HIGHLIGHT_HIGHTLIGHTERS=(main brackets pattern root)
 # Disable no-execution on pattern-matching failure
 unsetopt nomatch
 
+#Run SSH-AGENT
 SSH_ENV="$HOME/.ssh/environment"
 
 function start_agent {
@@ -52,5 +52,15 @@ if [ -f "${SSH_ENV}" ]; then
 else
     start_agent;
 fi
+# Add SSH-KEY
+ssh-add "$HOME/.ssh/*" 2> /dev/null
 
-ssh-add "$HOME/.ssh/suso-xpsbook" 2> /dev/null
+
+# Sources
+# Locals
+[ -f ~/.localrc ] && source ~/.commonrc
+[ -f ~/.localrc ] && source ~/.localrc
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# Common
+[ -f ~/.dotfiles/zsh/functions.zsh ] && source ~/.dotfiles/zsh/functions.zsh
+[ -f ~/.dotfiles/zsh/aliases.zsh ] && source ~/.dotfiles/zsh/aliases.zsh
