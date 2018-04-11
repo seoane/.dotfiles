@@ -11,6 +11,7 @@ COMPLETION_WAITING_DOTS="true"
 DISABLE_AUTO_TITLE="true"
 
 plugins=(
+    fzf-zsh
     aws
     docker
     gpg-agent
@@ -60,7 +61,6 @@ ssh-add "$HOME/.ssh/*" 2> /dev/null
 # Locals
 [ -f ~/.localrc ] && source ~/.commonrc
 [ -f ~/.localrc ] && source ~/.localrc
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 # Common
 [ -f ~/.dotfiles/zsh/functions.zsh ] && source ~/.dotfiles/zsh/functions.zsh
 [ -f ~/.dotfiles/zsh/aliases.zsh ] && source ~/.dotfiles/zsh/aliases.zsh
