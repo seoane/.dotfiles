@@ -1,0 +1,11 @@
+[alias]
+  co = checkout
+[core]
+  editor = vim
+    excludesfile = ~/.gitignore
+[user]
+  email = jesus.seoane@keepler.io
+  name = Suso Seoane
+[github]
+  user = seoane
+
