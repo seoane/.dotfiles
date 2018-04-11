@@ -31,9 +31,9 @@ ZSH_HIGHLIGHT_HIGHTLIGHTERS=(main brackets pattern root)
 unsetopt nomatch
 
 # Sources
-# Locals
+# Commons 
 [ -f ~/.commonrc ] && source ~/.commonrc
 [ -f ~/.localrc ] && source ~/.localrc
-# Common
+# ZSH
 [ -f ~/.dotfiles/zsh/functions.zsh ] && source ~/.dotfiles/zsh/functions.zsh
 [ -f ~/.dotfiles/zsh/aliases.zsh ] && source ~/.dotfiles/zsh/aliases.zsh
