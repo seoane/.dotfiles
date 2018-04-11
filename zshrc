@@ -27,6 +27,5 @@ source $ZSH/oh-my-zsh.sh
 ZSH_HIGHLIGHT_HIGHTLIGHTERS=(main brackets pattern root)
 ZSH_HIGHTLIGHT_STYLES[root]='bg=red'
 
-# Disable Nxt Page, Prev Page
-xmodmap -e 'keycode 112='
-xmodmap -e 'keycode 117=' 
+# Disable no-execution on pattern-matching failure
+unsetopt nomatch
