@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# Credits to Skardian for this abstraction script
+if which rofi; then
+    exec rofi -matching fuzzy -show run -fg "#00cd00" -bg "#333333" -hlfg "#ffffff" -hlbg "#336699" -font "Dejavu Sans Mono 26" -modi "run,window"
+elif which dmenu; then
+    exec dmenu
+else
+    exec i3-nagbar -m 'Could not find rofi or dmenu!'
+fi
+
