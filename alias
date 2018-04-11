@@ -8,4 +8,5 @@ alias .....='cd ../../../..'
 alias doh='sudo -E $(fc -ln -1)'
 
 # List
-alias ls='ls -lahtr --color=auto'
+alias ls='ls -lhtr --color=auto'
+alias lsa='ls -lahtr --color=auto'
