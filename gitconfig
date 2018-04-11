@@ -9,6 +9,20 @@
 [core]
   editor = vim
     excludesfile = ~/.gitignore
+[diff]
+    tool = vimdiff
+[difftool]
+    prompt = false;
+[merge]
+	tool = vimdiff
+	conflictstyle = diff3
+[mergetool]
+	prompt = false
+[pager]
+    diff = diff-so-fancy | less --tabs=4 -RFX
+    show = diff-so-fancy | less --tabs=4 -RFX
+[push]
+    default = current
 [user]
   email = jesus.seoane@keepler.io
   name = Suso Seoane
