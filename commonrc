@@ -23,3 +23,7 @@ else
 fi
 # Add SSH-KEY
 ssh-add "$HOME/.ssh/*" 2> /dev/null
+
+# Sources
+# Commons
+[ -f ~/.alias ] && source ~/.alias
