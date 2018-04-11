@@ -34,6 +34,9 @@ custom_install "zsh"
 # Installing I3
 custom_install "i3"
 
+# Installing Rofi
+custom_install "rofi"
+
 # Install oh-my-zsh
 echo "Installing oh-my-zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
