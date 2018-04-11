@@ -54,7 +54,7 @@ mkdir -p ~/bin
 
 # Files included
 DOT_DIR="$HOME/.dotfiles"
-FILES=" alias bashrc commonrc i3 tmux.conf vim vimrc zshrc"
+FILES=" alias gitconfig gitignore bashrc commonrc i3 tmux.conf vim vimrc zshrc"
 
 # Link dotfiles
 for f in $FILES; do
