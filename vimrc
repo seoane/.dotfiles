@@ -24,6 +24,7 @@ Plug 'wincent/terminus'
 Plug 'christoomey/vim-g-dot'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'hashivim/vim-terraform'
+Plug 'w0rp/ale'
 call plug#end()
 
 
