@@ -1,5 +1,3 @@
-set encoding=utf-8
-
 " Vim-plug loader 
 if empty(glob('~/.vim/autoload/plug.vim'))
 silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -15,13 +13,19 @@ Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'ervandew/supertab'
 Plug 'AndrewRadev/switch.vim'
+Plug 'EinfachToll/DidYouMean'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
 Plug 'hashivim/vim-terraform'
 call plug#end()
 
+
 " Switch
+
 " Source https://github.com/Skardian/.dotfiles/
 let g:switch_mapping = "-"
 augroup my_switch_group
@@ -35,7 +39,9 @@ augroup my_switch_group
 				\ ]
 augroup end
 
+
 " Vim Commentary
+
 " Disable comment on new line Not really working.... 
 augroup no_coments_oO
     autocmd!
@@ -43,7 +49,15 @@ augroup no_coments_oO
     autocmd BufEnter * set formatoptions-=o
 augroup END
 
+
+" Vim Ultisnips
+let g:UltiSnipsExpandTrigger="<S-tab>"
+
+
 " Vim Settings
+
+" General Settings
+set encoding=utf-8
 set number
 set backspace=indent,eol,start
 set listchars=eol:↲,tab:▶\ ,extends:>,precedes:<
