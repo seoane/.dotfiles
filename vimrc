@@ -56,6 +56,9 @@ let g:UltiSnipsExpandTrigger="<S-tab>"
 
 " Vim Settings
 
+" Remove Trailing
+autocmd BufWritePre * :%s/\s\+$//e
+
 " General Settings
 set encoding=utf-8
 set number
