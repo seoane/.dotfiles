@@ -28,4 +28,5 @@
   name = Suso Seoane
 [github]
   user = seoane
-
+[commit]
+ verbose = true
