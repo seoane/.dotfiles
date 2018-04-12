@@ -113,3 +113,8 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# vim download folders
+vim/autoload
+vim/plugged
+vim/.netrwhist
