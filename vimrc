@@ -60,10 +60,10 @@ let g:UltiSnipsExpandTrigger="<S-tab>"
 " Vim Gitgutter
 
 
-nmap <silent> < <Plug>GitGutterNextHunk
-nmap <silent> > <Plug>GitGutterPrevHunk
-nmap <silent> <s <Plug>GitGutterStageHunk
-nmap <silent> >s <Plug>GitGutterUndoHunk
+nmap <silent> gnh <Plug>GitGutterNextHunk
+nmap <silent> gph <Plug>GitGutterPrevHunk
+nmap <silent> gsh <Plug>GitGutterStageHunk
+nmap <silent> guh <Plug>GitGutterUndoHunk
 
 " Vim Settings
 
