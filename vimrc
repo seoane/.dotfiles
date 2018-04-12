@@ -1,4 +1,4 @@
-" Vim-plug loader 
+" Vim-plug loader
 if empty(glob('~/.vim/autoload/plug.vim'))
 silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
 				\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -16,7 +16,8 @@ Plug 'AndrewRadev/switch.vim'
 Plug 'EinfachToll/DidYouMean'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-
+Plug 'airblade/vim-gitgutter'
+Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
@@ -29,20 +30,20 @@ call plug#end()
 " Source https://github.com/Skardian/.dotfiles/
 let g:switch_mapping = "-"
 augroup my_switch_group
-	autocmd!
-	autocmd FileType terraform let b:switch_custom_definitions =
-				\ [
-				\   {
-				\     '\(\s\+source\s\+=\)\s\+"git::ssh://\([^/]*\)/\([^/]*\)/\([^?]*\)\(?ref.*\)*"': '\1 "../../terraform-modules/\4" # \2/\3/\4\5',
-				\     '\(\s\+source\s\+=\)\s\+".*/terraform-modules/[^ ]*\s*#\s\+\(.*\)': '\1 "git::ssh://\2"',
-				\   },
-				\ ]
+    autocmd!
+    autocmd FileType terraform let b:switch_custom_definitions =
+                \ [
+                \   {
+                \     '\(\s\+source\s\+=\)\s\+"git::ssh://\([^/]*\)/\([^/]*\)/\([^?]*\)\(?ref.*\)*"': '\1 "../../terraform-modules/\4" # \2/\3/\4\5',
+                \     '\(\s\+source\s\+=\)\s\+".*/terraform-modules/[^ ]*\s*#\s\+\(.*\)': '\1 "git::ssh://\2"',
+                \   },
+                \ ]
 augroup end
 
 
 " Vim Commentary
 
-" Disable comment on new line Not really working.... 
+" Disable comment on new line
 augroup no_coments_oO
     autocmd!
     autocmd BufEnter * set formatoptions-=r
@@ -53,6 +54,13 @@ augroup END
 " Vim Ultisnips
 let g:UltiSnipsExpandTrigger="<S-tab>"
 
+" Vim Gitgutter
+
+
+nmap <silent> < <Plug>GitGutterNextHunk
+nmap <silent> > <Plug>GitGutterPrevHunk
+nmap <silent> <s <Plug>GitGutterStageHunk
+nmap <silent> >s <Plug>GitGutterUndoHunk
 
 " Vim Settings
 
