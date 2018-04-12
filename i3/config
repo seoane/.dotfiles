@@ -15,6 +15,7 @@ font pango:monospace 8
 
 # Change Mod Key from Alt to Windows:
 set $mod Mod4
+
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
@@ -184,4 +185,4 @@ exec i3-config-wizard
 
 # CUSTOM KEYBINDINGS
 bindsym $mod+space exec --no-startup-id ~/.dotfiles/bin/i3launcher
-
+bindsym $mod+Shift+t exec --no-startup-id synclient TouchpadOff=$((! $(synclient -l | grep TouchpadOff | awk '{print $3}'))) 
