@@ -13,7 +13,7 @@ custom_install() {
      else
        echo "KO"
      fi
-  elif [[ ! -z $APT_GET_BIN ]]; then 
+  elif [[ ! -z $APT_GET_BIN ]]; then
     if sudo apt-get -qq install $1 -y > /dev/null; then
        echo "OK"
     else
@@ -22,7 +22,7 @@ custom_install() {
   else
      echo "error can't install package $1"
      exit 0;
-  fi              
+  fi
 }
 
 # Installing VIM
@@ -42,13 +42,13 @@ echo "Installing oh-my-zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # Install diff-so-fancy
-sudo wget https://raw.githubusercontent.com/so-fancy/diff-so-fancy/master/third_party/build_fatpack/diff-so-fancy -P /bin && sudo chmod 777 /bin/diff-so-fancy  
+sudo wget https://raw.githubusercontent.com/so-fancy/diff-so-fancy/master/third_party/build_fatpack/diff-so-fancy -P /bin && sudo chmod 777 /bin/diff-so-fancy
 
 # Creating symlink to custom omzsh themes
 echo "Creating omzsh themes symlink"
 if ! ln -s $HOME/.dotfiles/zsh/themes/* $HOME/.oh-my-zsh/themes > /dev/null; then
   echo "OK"
-else 
+else
   echo "KO"
 fi
 

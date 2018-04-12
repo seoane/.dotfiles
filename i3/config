@@ -185,4 +185,4 @@ exec i3-config-wizard
 
 # CUSTOM KEYBINDINGS
 bindsym $mod+space exec --no-startup-id ~/.dotfiles/bin/i3launcher
-bindsym $mod+Shift+t exec --no-startup-id synclient TouchpadOff=$((! $(synclient -l | grep TouchpadOff | awk '{print $3}'))) 
+bindsym $mod+Shift+t exec --no-startup-id synclient TouchpadOff=$((! $(synclient -l | grep TouchpadOff | awk '{print $3}')))
