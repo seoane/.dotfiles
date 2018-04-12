@@ -22,7 +22,7 @@ else
     start_agent;
 fi
 # Add SSH-KEY
-ssh-add "$HOME/.ssh/*" 2> /dev/null
+ssh-add $HOME/.ssh/pems/* 2> /dev/null
 
 # Sources
 # Commons
