@@ -64,10 +64,13 @@ nmap <silent> gph <Plug>GitGutterPrevHunk
 nmap <silent> gsh <Plug>GitGutterStageHunk
 nmap <silent> guh <Plug>GitGutterUndoHunk
 
-" Vim Settings
 
-" Remove Trailing
-autocmd BufWritePre * :%s/\s\+$//e
+" Vim better-whitespace
+let g:better_white_space_enabled=1
+let g:strip_whitespace_on_save=1
+
+
+" Vim Settings
 
 " General Settings
 set encoding=utf-8
