@@ -6,24 +6,28 @@ silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
 endif
 
 call plug#begin()
+Plug 'tpope/vim-surround'
+Plug 'AndrewRadev/switch.vim'
+Plug 'SirVer/ultisnips' " S+Tab
+Plug 'airblade/vim-gitgutter'
+Plug 'junegunn/fzf.vim'
+Plug 'w0rp/ale'
+
+" Keyless Plugin
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'ervandew/supertab'
-Plug 'AndrewRadev/switch.vim'
+Plug 'cohama/lexima.vim'
 Plug 'EinfachToll/DidYouMean'
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
-Plug 'airblade/vim-gitgutter'
 Plug 'sheerun/vim-polyglot'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
+Plug 'honza/vim-snippets'
 Plug 'wincent/terminus'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'hashivim/vim-terraform'
-Plug 'w0rp/ale'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'gko/vim-coloresque'
 call plug#end()
 
 
