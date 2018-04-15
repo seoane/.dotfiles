@@ -12,6 +12,8 @@ Plug 'SirVer/ultisnips' " S+Tab
 Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/fzf.vim'
 Plug 'w0rp/ale'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'tommcdo/vim-exchange'
 
 " Keyless Plugin
 Plug 'tpope/vim-commentary'
@@ -28,8 +30,14 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'hashivim/vim-terraform'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'gko/vim-coloresque'
+Plug 'junegunn/vim-easy-align'
+Plug 'luochen1990/rainbow'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-markdown'
+Plug 'nanotech/jellybeans.vim'
 call plug#end()
-
+la
 
 " Switch
 
@@ -73,6 +81,25 @@ nmap <silent> guh <Plug>GitGutterUndoHunk
 let g:better_white_space_enabled=1
 let g:strip_whitespace_on_save=1
 
+
+" Vim indent-guides
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_guide_size = 1
+let g:indent_guides_auto_colors = 1
+
+
+" Vim Colorschemes
+colorscheme jellybeans " Dark
+
+" Undo File
+" Store undo info inside .vim/undo
+if exists("+undofile")
+  if isdirectory($HOME . '/.vim/undo') == 0
+    :silent !mkdir -p ~/.vim/undo > /dev/null 2>&1
+  endif
+  set undodir=~/.vim/undo//
+  set undofile
+endif
 
 " Vim Settings
 
