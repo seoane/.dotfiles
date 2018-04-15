@@ -117,4 +117,5 @@ venv.bak/
 # vim download folders
 vim/autoload
 vim/plugged
+vim/undo
 vim/.netrwhist
