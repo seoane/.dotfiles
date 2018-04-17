@@ -187,3 +187,4 @@ exec i3-config-wizard
 bindsym $mod+space exec --no-startup-id ~/.dotfiles/bin/i3launcher
 bindsym $mod+Shift+t exec --no-startup-id synclient TouchpadOff=$((! $(synclient -l | grep TouchpadOff | awk '{print $3}')))
 bindsym Control+Mod1+l exec --no-startup-id lock -p -g -- scrot
+exec --no-startup-id unity-settings-daemon
