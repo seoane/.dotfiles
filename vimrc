@@ -36,6 +36,7 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-markdown'
 Plug 'nanotech/jellybeans.vim'
+Plug 'chrisbra/colorizer'
 call plug#end()
 la
 
