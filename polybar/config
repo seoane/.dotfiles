@@ -241,7 +241,7 @@ interval = 25
 mount-0 = /home/suso
 
 format-mounted = <label-mounted>
-label-mounted =  used% / %total%
+label-mounted =  %used% / %total%
 
 
 label-unmounted = %mountpoint%: not mounted
