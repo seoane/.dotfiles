@@ -1,16 +1,16 @@
 # ZSH Configuration
 
 # ZSH Installation path
-export ZSH                  = "$HOME/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set zsh theme
-ZSH_THEME                   = "suso"
+ZSH_THEME="suso"
 
 # ZSH Configs
-COMPLETION_WAITING_DOTS     = "true"
-DISABLE_AUTO_TITLE          = "true"
+COMPLETION_WAITING_DOTS="true"
+DISABLE_AUTO_TITLE="true"
 
-plugins                     = (
+plugins=(
     fzf-zsh
     aws
     docker
@@ -24,7 +24,7 @@ plugins                     = (
 
 source $ZSH/oh-my-zsh.sh
 
-ZSH_HIGHLIGHT_HIGHTLIGHTERS = (main brackets pattern root)
+ZSH_HIGHLIGHT_HIGHTLIGHTERS=(main brackets pattern root)
 
 # Disable no-execution on pattern-matching failure
 unsetopt nomatch
