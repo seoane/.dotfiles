@@ -88,10 +88,15 @@ bar-empty-foreground = #44
 [module/battery]
 type = internal/battery
 full-at = 98
+interval = 1
 
 format-charging = <animation-charging> <label-charging>
 format-discharging = <ramp-capacity> <label-discharging>
 format-full = <ramp-capacity> <label-full>
+
+label-charging = %time% %{F#99}%percentage%%
+label-discharging = %time% %{F#99}%percentage%%
+label-full = %title% %{F#99}%percentage%%
 
 ramp-capacity-0 = 
 ramp-capacity-0-foreground = #f53c3c
@@ -177,7 +182,7 @@ ramp-coreload-7-foreground = #ff5555
 [module/date]
 type = internal/date
 date =    %%{F#99}%Y-%m-%d%%{F-}  %%{F#fff}%H:%M:%S%%{F-}
-date-alt = %%{F#fff}%A, %d %B %Y  %%{F#fff}%H:%M:%S%%{F#666}:%%{F#fba922}%%{F-}
+date-alt = %%{F#fff}%A, %d %B %Y  %%{F#fff}%H:%M:%S%%{F#666}%%{F#fba922}%%{F-}
 
 [module/memory]
 type = internal/memory
@@ -217,7 +222,7 @@ interval = 1
 format =  <label>
 exec = ~/.config/polybar/modules/spotify.py -s
 
-label =  %output%
+label =  %output%
 
 [module/wireless-network]
 type = internal/network
