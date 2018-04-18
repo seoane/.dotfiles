@@ -1,33 +1,33 @@
 [alias]
-  co  = checkout
-  ch    = !$EDITOR $(git diff --name-only) ; Edit changed files
-  prb = pull --rebase
+  co              = checkout
+  ch              = !$EDITOR $(git diff --name-only) ; Edit changed files
+  prb             = pull --rebase
 
   #Source https://github.com/Skardian/.dotfiles/
-  t   = log --graph --pretty=format:'%C(yellow)%h%Creset%C(auto)%d%Creset %s %Cgreen(%cr)%Creset %C(bold blue)<%an>%Creset' --abbrev-commit --all
-  tb    = log --graph --pretty=format:'%C(yellow)%h%Creset%C(auto)%d%Creset %s %Cgreen(%cr)%Creset %C(bold blue)<%an>%Creset' --abbrev-commit --first-parent
-  who   = shortlog -sn
+  t               = log --graph --pretty=format:'%C(yellow)%h%Creset%C(auto)%d%Creset %s %Cgreen(%cr)%Creset %C(bold blue)<%an>%Creset' --abbrev-commit --all
+  tb              = log --graph --pretty=format:'%C(yellow)%h%Creset%C(auto)%d%Creset %s %Cgreen(%cr)%Creset %C(bold blue)<%an>%Creset' --abbrev-commit --first-parent
+  who             = shortlog -sn
 [core]
-  editor = vim
-    excludesfile = ~/.gitignore
+  editor          = vim
+    excludesfile  = ~/.gitignore
 [diff]
-    tool = vimdiff
+    tool          = vimdiff
 [difftool]
-    prompt = false;
+    prompt        = false;
 [merge]
-	tool = vimdiff
+	tool          = vimdiff
 	conflictstyle = diff3
 [mergetool]
-	prompt = false
+	prompt        = false
 [pager]
-    diff = diff-so-fancy | less --tabs=4 -RFX
-    show = diff-so-fancy | less --tabs=4 -RFX
+    diff          = diff-so-fancy | less --tabs=4 -RFX
+    show          = diff-so-fancy | less --tabs=4 -RFX
 [push]
-    default = current
+    default       = current
 [user]
-  email = jesus.seoane@keepler.io
-  name = Suso Seoane
+  email           = jesus.seoane@keepler.io
+  name            = Suso Seoane
 [github]
-  user = seoane
+  user            = seoane
 [commit]
- verbose = true
+ verbose          = true
