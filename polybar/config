@@ -1,275 +1,275 @@
 [settings]
-screenchange-reload = true
+screenchange-reload           = true
 
 [colors]
-background = #00000000
-foreground = #ccffffff
-foreground-alt = #66
-line-color = #cb607777
-red = #cb6077
-focus = #ffa500
-green = #aaff77
+background                    = #00000000
+foreground                    = #ccffffff
+foreground-alt                = #66
+line-color                    = #cb607777
+red                           = #cb6077
+focus                         = #ffa500
+green                         = #aaff77
 
 [bar/top]
-monitor = eDP1
-width = 100%
-height = 25
+monitor                       = eDP1
+width                         = 100%
+height                        = 25
 
-background = ${colors.background}
-foreground = ${colors.foreground}
-line-color = ${colors.line-color}
+background                    = ${colors.background}
+foreground                    = ${colors.foreground}
+line-color                    = ${colors.line-color}
 
-line-size = 2
+line-size                     = 2
 
-spacing = 2
-padding-right = 5
-module-margin = 4
+spacing                       = 2
+padding-right                 = 5
+module-margin                 = 4
 
-font-1 = "DejaVuSansMono Nerd Font Mono:size=10;1"
-font-0 = FontAwesome:pixelsize=15
-font-2 = material\-wifi:pixelsize=15
+font-1                        = "DejaVuSansMono Nerd Font Mono:size=10;1"
+font-0                        = FontAwesome:pixelsize=15
+font-2                        = material\-wifi:pixelsize=15
 
-modules-center = i3
-modules-left =  spotify
-modules-right = keyboard volume backlight battery date
+modules-center                = i3
+modules-left                  = spotify
+modules-right                 = keyboard volume backlight battery date
 
 [bar/bottom]
-monitor = eDP1
-bottom = true
-width = 100%
-height = 20
+monitor                       = eDP1
+bottom                        = true
+width                         = 100%
+height                        = 20
 
-background = ${colors.background}
-foreground = ${colors.foreground}
-line-color = ${colors.line-color}
+background                    = ${colors.background}
+foreground                    = ${colors.foreground}
+line-color                    = ${colors.line-color}
 
-line-size = 2
+line-size                     = 2
 
-spacing = 2
-padding-right = 5
-module-margin = 4
+spacing                       = 2
+padding-right                 = 5
+module-margin                 = 4
 
-font-1 = "DejaVuSansMono Nerd Font Mono:size=10;1"
-font-0 = FontAwesome:pixelsize=15
-font-2 = material\-wifi:pixelsize=15
+font-1                        = "DejaVuSansMono Nerd Font Mono:size=10;1"
+font-0                        = FontAwesome:pixelsize=15
+font-2                        = material\-wifi:pixelsize=15
 
-modules-right = temperature filesystem cpu memory
-modules-left = wireless-network
+modules-right                 = temperature filesystem cpu memory
+modules-left                  = wireless-network
 
 [module/keyboard]
-type = internal/xkeyboard
+type                          = internal/xkeyboard
 
-label-layout =  %layout%
+label-layout                  =  %layout%
 
 ; List of indicators to ignore
-blacklist-0 = num lock
-blacklist-1 = scroll lock
+blacklist-0                   = num lock
+blacklist-1                   = scroll lock
 
 [module/backlight]
-type = internal/xbacklight
-card = intel_backlight
-format = <ramp> <bar>
-enable-scroll =true
+type                          = internal/xbacklight
+card                          = intel_backlight
+format                        = <ramp> <bar>
+enable-scroll                 = true
 
-ramp-0 = 
-ramp-1 = 
+ramp-0                        = 
+ramp-1                        = 
 
-bar-width = 10
-bar-indicator = |
-bar-indicator-font = 3
-bar-indicator-foreground = #ff
-bar-fill = ─
-bar-fill-font = 3
-bar-fill-foreground = #c9665e
-bar-empty = ─
-bar-empty-font = 3
-bar-empty-foreground = #44
+bar-width                     = 10
+bar-indicator                 = |
+bar-indicator-font            = 3
+bar-indicator-foreground      = #ff
+bar-fill                      = ─
+bar-fill-font                 = 3
+bar-fill-foreground           = #c9665e
+bar-empty                     = ─
+bar-empty-font                = 3
+bar-empty-foreground          = #44
 
 [module/battery]
-type = internal/battery
-full-at = 98
-interval = 1
+type                          = internal/battery
+full-at                       = 98
+interval                      = 1
 
-format-charging = <animation-charging> <label-charging>
-format-discharging = <ramp-capacity> <label-discharging>
-format-full = <ramp-capacity> <label-full>
+format-charging               = <animation-charging> <label-charging>
+format-discharging            = <ramp-capacity> <label-discharging>
+format-full                   = <ramp-capacity> <label-full>
 
-label-charging = %time% %{F#99}%percentage%%
-label-discharging = %time% %{F#99}%percentage%%
-label-full = %title% %{F#99}%percentage%%
+label-charging                = %time% %{F#99}%percentage%%
+label-discharging             = %time% %{F#99}%percentage%%
+label-full                    = %title% %{F#99}%percentage%%
 
-ramp-capacity-0 = 
-ramp-capacity-0-foreground = #f53c3c
-ramp-capacity-1 = 
-ramp-capacity-1-foreground = #ffa900
-ramp-capacity-2 = 
-ramp-capacity-3 = 
-ramp-capacity-4 = 
+ramp-capacity-0               = 
+ramp-capacity-0-foreground    = #f53c3c
+ramp-capacity-1               = 
+ramp-capacity-1-foreground    = #ffa900
+ramp-capacity-2               = 
+ramp-capacity-3               = 
+ramp-capacity-4               = 
 
-bar-capacity-width = 10
-bar-capacity-format = %{+u}%{+o}%fill%%empty%%{-u}%{-o}
-bar-capacity-fill = █
-bar-capacity-fill-foreground = #ddffffff
-bar-capacity-fill-font = 3
-bar-capacity-empty = █
-bar-capacity-empty-font = 3
+bar-capacity-width            = 10
+bar-capacity-format           = %{+u}%{+o}%fill%%empty%%{-u}%{-o}
+bar-capacity-fill             = █
+bar-capacity-fill-foreground  = #ddffffff
+bar-capacity-fill-font        = 3
+bar-capacity-empty            = █
+bar-capacity-empty-font       = 3
 bar-capacity-empty-foreground = #44ffffff
 
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-3 = 
-animation-charging-4 = 
-animation-charging-framerate = 750
+animation-charging-0          = 
+animation-charging-1          = 
+animation-charging-2          = 
+animation-charging-3          = 
+animation-charging-4          = 
+animation-charging-framerate  = 750
 
 [module/i3]
-type = internal/i3
+type                          = internal/i3
 
-pin-workspaces = true
+pin-workspaces                = true
 
-strip-wsnumbers = true
+strip-wsnumbers               = true
 
-ndex-sort = true
-enable-click = true
-enable-scroll = true
-wrapping-scroll = true
-reverse-scroll = false
-fuzzy-match = true
+ndex-sort                     = true
+enable-click                  = true
+enable-scroll                 = true
+wrapping-scroll               = true
+reverse-scroll                = false
+fuzzy-match                   = true
 
-label-unfocused-foreground = ${colors.foreground-alt}
-label-focused-foreground = ${colors.foreground}
-label-visible-foreground = ${colors.foreground}
+label-unfocused-foreground    = ${colors.foreground-alt}
+label-focused-foreground      = ${colors.foreground}
+label-visible-foreground      = ${colors.foreground}
 
-label-urgent-underline = ${colors.red}
-label-focused-underline = ${colors.focus}
+label-urgent-underline        = ${colors.red}
+label-focused-underline       = ${colors.focus}
 
-label-unfocused-padding = 1
-label-focused-padding = 1
-label-visible-padding = 1
-label-urgent-padding = 1
+label-unfocused-padding       = 1
+label-focused-padding         = 1
+label-visible-padding         = 1
+label-urgent-padding          = 1
 
 [module/cpu]
-type = internal/cpu
-interval = 0.5
-format = <label> <ramp-coreload>
-label =  CPU
+type                          = internal/cpu
+interval                      = 0.5
+format                        = <label> <ramp-coreload>
+label                         =  CPU
 
-ramp-coreload-0 = ▁
-ramp-coreload-0-font = 2
-ramp-coreload-0-foreground = #aaff77
-ramp-coreload-1 = ▂
-ramp-coreload-1-font = 2
-ramp-coreload-1-foreground = #aaff77
-ramp-coreload-2 = ▃
-ramp-coreload-2-font = 2
-ramp-coreload-2-foreground = #aaff77
-ramp-coreload-3 = ▄
-ramp-coreload-3-font = 2
-ramp-coreload-3-foreground = #aaff77
-ramp-coreload-4 = ▅
-ramp-coreload-4-font = 2
-ramp-coreload-4-foreground = #fba922
-ramp-coreload-5 = ▆
-ramp-coreload-5-font = 2
-ramp-coreload-5-foreground = #fba922
-ramp-coreload-6 = ▇
-ramp-coreload-6-font = 2
-ramp-coreload-6-foreground = #ff5555
-ramp-coreload-7 = █
-ramp-coreload-7-font = 2
-ramp-coreload-7-foreground = #ff5555
+ramp-coreload-0               = ▁
+ramp-coreload-0-font          = 2
+ramp-coreload-0-foreground    = #aaff77
+ramp-coreload-1               = ▂
+ramp-coreload-1-font          = 2
+ramp-coreload-1-foreground    = #aaff77
+ramp-coreload-2               = ▃
+ramp-coreload-2-font          = 2
+ramp-coreload-2-foreground    = #aaff77
+ramp-coreload-3               = ▄
+ramp-coreload-3-font          = 2
+ramp-coreload-3-foreground    = #aaff77
+ramp-coreload-4               = ▅
+ramp-coreload-4-font          = 2
+ramp-coreload-4-foreground    = #fba922
+ramp-coreload-5               = ▆
+ramp-coreload-5-font          = 2
+ramp-coreload-5-foreground    = #fba922
+ramp-coreload-6               = ▇
+ramp-coreload-6-font          = 2
+ramp-coreload-6-foreground    = #ff5555
+ramp-coreload-7               = █
+ramp-coreload-7-font          = 2
+ramp-coreload-7-foreground    = #ff5555
 
 [module/date]
-type = internal/date
-date =    %%{F#99}%Y-%m-%d%%{F-}  %%{F#fff}%H:%M:%S%%{F-}
-date-alt = %%{F#fff}%A, %d %B %Y  %%{F#fff}%H:%M:%S%%{F#666}%%{F#fba922}%%{F-}
+type                          = internal/date
+date                          = %%{F#99}%Y-%m-%d%%{F-}  %%{F#fff}%H:%M:%S%%{F-}
+date-alt                      = %%{F#fff}%A, %d %B %Y  %%{F#fff}%H:%M:%S%%{F#666}%%{F#fba922}%%{F-}
 
 [module/memory]
-type = internal/memory
-format = <label> <bar-used>
-label =  RAM
+type                          = internal/memory
+format                        = <label> <bar-used>
+label                         =  RAM
 
-bar-used-width = 30
-bar-used-foreground-0 = #aaff77
-bar-used-foreground-1 = #aaff77
-bar-used-foreground-2 = #fba922
-bar-used-foreground-3 = #ff5555
-bar-used-indicator = |
-bar-used-indicator-font = 6
+bar-used-width                = 30
+bar-used-foreground-0         = #aaff77
+bar-used-foreground-1         = #aaff77
+bar-used-foreground-2         = #fba922
+bar-used-foreground-3         = #ff5555
+bar-used-indicator            = |
+bar-used-indicator-font       = 6
 bar-used-indicator-foreground = #ff
-bar-used-fill = ─
-bar-used-fill-font = 6
-bar-used-empty = ─
-bar-used-empty-font = 6
-bar-used-empty-foreground = #444444
+bar-used-fill                 = ─
+bar-used-fill-font            = 6
+bar-used-empty                = ─
+bar-used-empty-font           = 6
+bar-used-empty-foreground     = #444444
 
 [module/temperature]
-type = internal/temperature
+type                          = internal/temperature
 
-interval = 0.5
-thermal-zone = 0
+interval                      = 0.5
+thermal-zone                  = 0
 
-hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input
-warn-temperature = 60
+hwmon-path                    = /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input
+warn-temperature              = 60
 
-format = <label>
-label =  %temperature%
+format                        = <label>
+label                         =  %temperature%
 
 [module/spotify]
-type = custom/script
-interval = 1
+type                          = custom/script
+interval                      = 1
 ; format-online = <icon-prev> <icon-toggle> <icon-next> <label>
-format =  <label>
-exec = ~/.config/polybar/modules/spotify.py -s
+format                        = <label>
+exec                          = ~/.config/polybar/modules/spotify.py -s
 
-label =  %output%
+label                         =  %output%
 
 [module/wireless-network]
-type = internal/network
-interface = wlp2s0
-interval = 3.0
-ping-interval = 10
+type                          = internal/network
+interface                     = wlp2s0
+interval                      = 3.0
+ping-interval                 = 10
 
-format-connected = <ramp-signal><label-connected>
-label-connected = %essid%    %local_ip%   %{F#aaff77} %downspeed% %upspeed%%{F#ccffffff}
-label-disconnected = not connected
+format-connected              = <ramp-signal><label-connected>
+label-connected               = %essid%    %local_ip%   %{F#aaff77} %downspeed% %upspeed%%{F#ccffffff}
+label-disconnected            = not connected
 label-disconnected-foreground = ${colors.foreground-alt}
 
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
+ramp-signal-0                 = 
+ramp-signal-1                 = 
+ramp-signal-2                 = 
+ramp-signal-3                 = 
 
 [module/filesystem]
-type = internal/fs
-interval = 25
-mount-0 = /home/suso
+type                          = internal/fs
+interval                      = 25
+mount-0                       = /home/suso
 
-format-mounted = <label-mounted>
-label-mounted =  %used% / %total%
+format-mounted                = <label-mounted>
+label-mounted                 =  %used% / %total%
 
 
-label-unmounted = %mountpoint%: not mounted
-label-unmounted-foreground = ${colors.foreground-alt}
+label-unmounted               = %mountpoint%: not mounted
+label-unmounted-foreground    = ${colors.foreground-alt}
 
 [module/volume]
-master-soundcard = default
-speaker-soundcard = default
-headphone-soundcard = default
-master-mixer = Master
+master-soundcard              = default
+speaker-soundcard             = default
+headphone-soundcard           = default
+master-mixer                  = Master
 
-type = internal/volume
+type                          = internal/volume
 
-format-volume = <ramp-volume> <label-volume>
-label-muted = mute
-label-muted-foreground = #66
-ramp-volume-0 = 
-ramp-volume-1 = 
-ramp-volume-2 = 
+format-volume                 = <ramp-volume> <label-volume>
+label-muted                   = mute
+label-muted-foreground        = #66
+ramp-volume-0                 = 
+ramp-volume-1                 = 
+ramp-volume-2                 = 
 
 [module/gmail]
-type = custom/script
-exec = ~/.config/polybar/modules/gmail/gmail.py
-tail = true
-click-left = xdg-open https://mail.google.com
+type                          = custom/script
+exec                          = ~/.config/polybar/modules/gmail/gmail.py
+tail                          = true
+click-left                    = xdg-open https://mail.google.com
 ; vim:ft=dosini
