@@ -102,6 +102,12 @@ if exists("+undofile")
   set undofile
 endif
 
+
+" Vim easy-align
+nmap ga <Plug>(LiveEasyAlign)
+xmap ga <Plug>(LiveEasyAlign)
+xmap <Enter> <Plug>(LiveEasyAlign)
+
 " Vim Settings
 
 " General Settings
