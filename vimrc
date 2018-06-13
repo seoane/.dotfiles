@@ -37,8 +37,8 @@ Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-markdown'
 Plug 'nanotech/jellybeans.vim'
 Plug 'chrisbra/colorizer'
+Plug 'pearofducks/ansible-vim'
 call plug#end()
-la
 
 " Switch
 
@@ -56,6 +56,13 @@ augroup my_switch_group
 augroup end
 
 
+" Vim Ansible
+let g:ansible_unindent_after_newline = 1
+let g:ansible_attribute_highlight = "ob"
+let g:ansible_name_highlight = 'd'
+let g:ansible_extra_keywords_highlight = 1
+
+
 " Vim Commentary
 
 " Disable comment on new line
@@ -69,9 +76,8 @@ augroup END
 " Vim Ultisnips
 let g:UltiSnipsExpandTrigger="<S-tab>"
 
+
 " Vim Gitgutter
-
-
 nmap <silent> gnh <Plug>GitGutterNextHunk
 nmap <silent> gph <Plug>GitGutterPrevHunk
 nmap <silent> gsh <Plug>GitGutterStageHunk

@@ -11,7 +11,7 @@ focus                         = #ffa500
 green                         = #aaff77
 
 [bar/top]
-monitor                       = eDP1
+monitor                       = ${env:MONITOR:}
 width                         = 100%
 height                        = 25
 
@@ -34,7 +34,7 @@ modules-left                  = spotify
 modules-right                 = keyboard volume backlight battery date
 
 [bar/bottom]
-monitor                       = eDP1
+monitor                       = ${env:MONITOR:}
 bottom                        = true
 width                         = 100%
 height                        = 20
@@ -96,7 +96,7 @@ format-full                   = <ramp-capacity> <label-full>
 
 label-charging                = %time% %{F#99}%percentage%%
 label-discharging             = %time% %{F#99}%percentage%%
-label-full                    = %title% %{F#99}%percentage%%
+label-full                    = %{F#99}%percentage%%
 
 ramp-capacity-0               = 
 ramp-capacity-0-foreground    = #f53c3c
