@@ -36,3 +36,6 @@ unsetopt nomatch
 # ZSH
 [ -f ~/.dotfiles/zsh/functions.zsh ] && source ~/.dotfiles/zsh/functions.zsh
 [ -f ~/.dotfiles/zsh/aliases.zsh ] && source ~/.dotfiles/zsh/aliases.zsh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source <(awless completion zsh)
