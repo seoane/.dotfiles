@@ -27,7 +27,7 @@ def get_song():
         print song
         return output
     except:
-        print("")
+        print("No Song")
     pass
 
 
@@ -46,7 +46,7 @@ def action(action):
         elif action == 'previous':
             interface.Previous()
     except Exception as e:
-        print(e)
+        print(e + "action")
 
 
 def main():
