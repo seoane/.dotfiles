@@ -25,9 +25,12 @@
 [push]
     default       = current
 [user]
-  email           = suso.seoane@keepler.io
-  name            = Suso Seoane
+	email = suso.seoane@keepler.io
+	name = JESUS SEOANE VILA
 [github]
   user            = seoane
 [commit]
  verbose          = true
+[credential]
+	helper = !aws --profile admin-dotw-mrproper-poc codecommit credential-helper $@
+	UseHttpPath = true
