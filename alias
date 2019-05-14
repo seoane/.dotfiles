@@ -13,3 +13,7 @@ alias lsa='ls -lahtr --color=auto'
 
 # Applications remap
 alias vim='nvim'
+
+# Applications rescale
+
+alias sqlworkbench='sudo sh /home/suso/Documents/tools/sqlworkbench.sh'
