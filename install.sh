@@ -25,6 +25,42 @@ custom_install() {
   fi
 }
 
+# Installing cmake
+custom_install "cmake"
+
+# Installing cairo-lib
+custom_install "libcairo2-dev"
+
+# Installing python-xcbgen
+custom_install "python-xcbgen"
+
+# Installing libcurl
+custom_install "libcurl4-openssl-dev"
+
+# Installing libmpdclient
+custom_install "libmpdclient-dev"
+
+# Installing Libiw
+custom_install "libiw-dev"
+
+# Installing xcb-xkb
+custom_install "libxcb-xkb-dev"
+
+# Installing xcb-randr
+custom_install "libxcb-randr0-dev"
+
+# Installing xcb-proto
+custom_install "xcb-proto"
+
+# Installing libxcb-util-dev
+custom_install "libxcb-util-dev"
+
+# Installing libxcb-icccm4-dev
+custom_install "libxcb-icccm4-dev"
+
+# Installing libxcb-image0-dev
+custom_install "libxcb-image0-dev"
+
 # Installing VIM
 custom_install "vim"
 
@@ -48,8 +84,9 @@ echo "Installing oh-my-zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # Install polybar
-git clone --branch 3.1.0 --recursive https://github.com/jaagr/polybar
-mkdir polybar/build
+git clone --branch 3.1.0 --recursive https://github.com/jaagr/polybar /tmp/polybar
+mkdir /tmp/polybar/build
+cd /tmp/polybar/build
 cmake ..
 sudo make install
 
