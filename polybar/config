@@ -13,7 +13,7 @@ green                         = #aaff77
 [bar/top]
 monitor                       = ${env:MONITOR:}
 width                         = 100%
-height                        = 25
+height                        = 30
 
 background                    = ${colors.background}
 foreground                    = ${colors.foreground}
@@ -25,9 +25,9 @@ spacing                       = 2
 padding-right                 = 5
 module-margin                 = 4
 
-font-1                        = "DejaVuSansMono Nerd Font Mono:size=10;1"
-font-0                        = FontAwesome:pixelsize=15
-font-2                        = material\-wifi:pixelsize=15
+font-1                        = "DejaVuSansMono Nerd Font Complete Mono:size=18;1"
+font-0                        = FontAwesome:pixelsize=18
+font-2                        = material\-wifi:pixelsize=18
 
 modules-center                = i3
 modules-left                  = spotify
@@ -37,21 +37,21 @@ modules-right                 = keyboard volume backlight battery date
 monitor                       = ${env:MONITOR:}
 bottom                        = true
 width                         = 100%
-height                        = 20
+height                        = 40
 
 background                    = ${colors.background}
 foreground                    = ${colors.foreground}
 line-color                    = ${colors.line-color}
 
-line-size                     = 2
+line-size                     = 0
 
 spacing                       = 2
 padding-right                 = 5
 module-margin                 = 4
 
-font-1                        = "DejaVuSansMono Nerd Font Mono:size=10;1"
-font-0                        = FontAwesome:pixelsize=15
-font-2                        = material\-wifi:pixelsize=15
+font-1                        = "DejaVuSansMono Nerd Font Mono:size=18;1"
+font-0                        = FontAwesome:pixelsize=18
+font-2                        = material\-wifi:pixelsize=18
 
 modules-right                 = temperature filesystem cpu memory
 modules-left                  = wireless-network
