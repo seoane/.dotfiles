@@ -119,3 +119,7 @@ vim/autoload
 vim/plugged
 vim/undo
 vim/.netrwhist
+
+# compression files
+.zip
+.tar.gz
