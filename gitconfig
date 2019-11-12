@@ -9,28 +9,28 @@
   who             = shortlog -sn
 [core]
   editor          = vim
-    excludesfile  = ~/.gitignore
+  excludesfile  = ~/.gitignore
 [diff]
-    tool          = vimdiff
+  tool          = vimdiff
 [difftool]
-    prompt        = false;
+  prompt        = false;
 [merge]
-	tool          = vimdiff
-	conflictstyle = diff3
+  tool          = vimdiff
+  conflictstyle = diff3
 [mergetool]
-	prompt        = false
+  prompt        = false
 [pager]
-    diff          = diff-so-fancy | less --tabs=4 -RFX
-    show          = diff-so-fancy | less --tabs=4 -RFX
+  diff          = diff-so-fancy | less --tabs=4 -RFX
+  show          = diff-so-fancy | less --tabs=4 -RFX
 [push]
-    default       = current
-[user]
-	email = suso.seoane@keepler.io
-	name = JESUS SEOANE VILA
+  default       = current
 [github]
   user            = seoane
 [commit]
- verbose          = true
+  verbose          = true
 [credential]
-	helper = !aws --profile admin-dotw-mrproper-poc codecommit credential-helper $@
-	UseHttpPath = true
+  helper = cache --timeout 28800
+  UseHttpPath = true
+[user]
+  email = suso.seoane@keepler.io
+
