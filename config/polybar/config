@@ -30,7 +30,7 @@ font-0                        = FontAwesome:pixelsize=18
 font-2                        = material\-wifi:pixelsize=18
 
 modules-center                = i3
-modules-left                  = spotify
+#modules-left                  = spotify
 modules-right                 = keyboard volume backlight battery date
 
 [bar/bottom]
