@@ -25,14 +25,14 @@ custom_install() {
   fi
 }
 
+# Installing awscli
+custom_install "awscli"
+
 # Installing cmake
 custom_install "cmake"
 
 # Installing cairo-lib
 custom_install "libcairo2-dev"
-
-# Installing python-xcbgen
-custom_install "python-xcbgen"
 
 # Installing libcurl
 custom_install "libcurl4-openssl-dev"
@@ -79,16 +79,15 @@ custom_install "i3"
 # Installing Rofi
 custom_install "rofi"
 
+# Installing Polybar 
+custom_install "polybar"
+
 # Install oh-my-zsh
 echo "Installing oh-my-zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-# Install polybar
-git clone --branch 3.1.0 --recursive https://github.com/jaagr/polybar /tmp/polybar
-mkdir /tmp/polybar/build
-cd /tmp/polybar/build
-cmake ..
-sudo make install
+# Install omzsh highlight plugin
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 # Install vim-plug
 sh -c "$(curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
@@ -97,7 +96,9 @@ sh -c "$(curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 # Install diff-so-fancy
 sudo wget https://raw.githubusercontent.com/so-fancy/diff-so-fancy/master/third_party/build_fatpack/diff-so-fancy -P /bin && sudo chmod 777 /bin/diff-so-fancy
 
-# Creating symlink to custom omzsh themes
+# Create the bin folder
+mkdir -p ~/bin
+
 echo "Creating omzsh themes symlink"
 if ! ln -s $HOME/.dotfiles/zsh/themes/* $HOME/.oh-my-zsh/themes > /dev/null; then
   echo "OK"
@@ -105,20 +106,9 @@ else
   echo "KO"
 fi
 
-# Creating symlink to custom omzsh themes
-echo "Creating nvim init.vim symlink"
-if ! ln -s $HOME/.dotfiles/config/nvim/init.vim $HOME/.config/nvim/init.vim > /dev/null; then
-  echo "OK"
-else
-  echo "KO"
-fi
-
-# Create the bin folder
-mkdir -p ~/bin
-
 # Files included
 DOT_DIR="$HOME/.dotfiles"
-FILES=" alias gitconfig gitignore bashrc commonrc i3 vim vimrc zshrc"
+FILES=" alias config/polybar gitconfig gitignore bashrc commonrc i3 vim vimrc zshrc p10k.zsh"
 
 # Link dotfiles
 for f in $FILES; do

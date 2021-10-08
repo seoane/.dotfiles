@@ -184,8 +184,7 @@ bindsym Control+Mod1+l exec --no-startup-id ~/.dotfiles/bin/lock/lock -p
 bindsym Control+Mod1+s exec --no-startup-id scrot
 
 exec --no-startup-id ~/.dotfiles/bin/polybarlauncher
-exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper.jpg
-exec --no-startup-id xrandr --output DP-2 --mode 1920x1080 --scale 1.5x1.5 --pos 2880x0 --rotate normal --output eDP-1 --primary --mode 1920x1080 --scale 1.5x1.5 --pos 0x0 --rotate normal --output DP-2 --off
+#exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper.jpg
 
 focus_follows_mouse no
 workspace_auto_back_and_forth yes
