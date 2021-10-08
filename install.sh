@@ -96,11 +96,14 @@ sh -c "$(curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 # Install diff-so-fancy
 sudo wget https://raw.githubusercontent.com/so-fancy/diff-so-fancy/master/third_party/build_fatpack/diff-so-fancy -P /bin && sudo chmod 777 /bin/diff-so-fancy
 
+# Download powerlevel10k
+git clone https://github.com/romkatv/powerlevel10k.git $HOME/.dotfiles/zsh/themes/
+
 # Create the bin folder
 mkdir -p ~/bin
 
-echo "Creating omzsh themes symlink"
-if ! ln -s $HOME/.dotfiles/zsh/themes/* $HOME/.oh-my-zsh/themes > /dev/null; then
+#echo "Creating omzsh themes symlink"
+if ! ln -s $HOME/.dotfiles/zsh/themes/powerlevel10k $HOME/.oh-my-zsh/themes/powerlevel10k > /dev/null; then
   echo "OK"
 else
   echo "KO"
@@ -108,11 +111,18 @@ fi
 
 # Files included
 DOT_DIR="$HOME/.dotfiles"
-FILES=" alias config/polybar gitconfig gitignore bashrc commonrc i3 vim vimrc zshrc p10k.zsh"
+FILES=" alias config/polybar gitconfig gitignore bashrc i3 commonrc vim vimrc zshrc p10k.zsh"
 
 # Link dotfiles
 for f in $FILES; do
     FILE="$HOME/.$f"
     ln -sf $DOT_DIR/$f $FILE;
 done
+
+# Install Pk10 fonts
+if [ ! -d $HOME/.local/share/fonts/ ]; then
+  mkdir -p $HOME/.local/share/fonts/;
+fi
+cp $HOME/.dotfiles/zsh/fonts/* $HOME/.local/share/fonts/
+fc-cache -f -v
 
