@@ -1,11 +1,7 @@
-" Vim-plug loader
-" if empty(glob('~/.vim/autoload/plug.vim'))
-" silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-				" \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-	" autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-" endif
-
 call plug#begin()
+Plug 'nanotech/jellybeans.vim'
+Plug 'preservim/nerdtree'
+
 Plug 'tpope/vim-surround'
 Plug 'AndrewRadev/switch.vim'
 Plug 'SirVer/ultisnips' " S+Tab
@@ -14,6 +10,17 @@ Plug 'junegunn/fzf.vim'
 Plug 'w0rp/ale'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tommcdo/vim-exchange'
+Plug 'hashivim/vim-terraform'
+Plug 'vim-syntastic/syntastic'
+Plug 'juliosueiras/vim-terraform-completion'
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+let g:deoplete#enable_at_startup = 1
 
 " Keyless Plugin
 Plug 'tpope/vim-commentary'
@@ -54,6 +61,36 @@ augroup my_switch_group
                 \   },
                 \ ]
 augroup end
+" Terraform config
+let g:terraform_fmt_on_save=1
+let g:terraform_align=1
+autocmd BufEnter *.tf* colorscheme icansee
+
+" Syntastic Config
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" (Optional)Remove Info(Preview) window
+set completeopt-=preview
+
+" (Optional)Hide Info(Preview) window after completions
+autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+
+" (Optional) Enable terraform plan to be include in filter
+let g:syntastic_terraform_tffilter_plan = 1
+
+" (Optional) Default: 0, enable(1)/disable(0) plugin's keymapping
+let g:terraform_completion_keys = 1
+
+" (Optional) Default: 1, enable(1)/disable(0) terraform module registry completion
+let g:terraform_registry_module_completion = 0
 
 
 " Vim Ansible
@@ -78,10 +115,10 @@ let g:UltiSnipsExpandTrigger="<S-tab>"
 
 
 " Vim Gitgutter
-nmap <silent> gnh <Plug>GitGutterNextHunk
-nmap <silent> gph <Plug>GitGutterPrevHunk
-nmap <silent> gsh <Plug>GitGutterStageHunk
-nmap <silent> guh <Plug>GitGutterUndoHunk
+nmap <silent> gnh <Plug>(GitGutterNextHunk)
+nmap <silent> gph <Plug>(GitGutterPrevHunk)
+nmap <silent> gsh <Plug>(GitGutterStageHunk)
+nmap <silent> guh <Plug>(GitGutterUndoHunk)
 
 
 " Vim better-whitespace
@@ -129,3 +166,13 @@ set autoindent
 set shiftwidth=4
 set softtabstop=4
 set tabstop=4
+
+" Fzf Remaps
+nnoremap <silent> <C-f> :FZF<CR>
+
+" NerdTree
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | endif
+" Close the tab if NERDTree is the only window remaining in it.
+autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+
