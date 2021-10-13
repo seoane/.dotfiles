@@ -1,4 +1,6 @@
 #!/bin/bash
+# set dotfiles dir
+DOT_DIR="$HOME/.dotfiles"
 
 # Determine Vendor
 YUM_BIN=$(which yum)
@@ -79,8 +81,17 @@ custom_install "i3"
 # Installing Rofi
 custom_install "rofi"
 
-# Installing Polybar 
+# Installing Polybar
 custom_install "polybar"
+
+# Install Node
+custom_install "nodejs"
+
+# Install npm
+custom_install "npm"
+
+# Install commitizen
+npm install -g commitizen
 
 # Install oh-my-zsh
 echo "Installing oh-my-zsh"
@@ -110,8 +121,7 @@ else
 fi
 
 # Files included
-DOT_DIR="$HOME/.dotfiles"
-FILES=" alias config/polybar gitconfig gitignore bashrc i3 commonrc vim vimrc zshrc p10k.zsh"
+FILES=" alias polybar gitconfig gitignore bashrc i3 commonrc vim vimrc zshrc p10k.zsh"
 
 # Link dotfiles
 for f in $FILES; do
@@ -119,10 +129,14 @@ for f in $FILES; do
     ln -sf $DOT_DIR/$f $FILE;
 done
 
-# Install Pk10 fonts
-if [ ! -d $HOME/.local/share/fonts/ ]; then
-  mkdir -p $HOME/.local/share/fonts/;
+# Install Fonts
+FDIR="$HOME/.local/share/fonts"
+echo -e "\n[*] Installing fonts..."
+if [[ -d "$FDIR" ]]; then
+    cp -rf $DOT_DIR/fonts/* "$FDIR"
+else
+    mkdir -p "$FDIR"
+    cp -rf $DOT_DIR/fonts/* "$FDIR"
 fi
-cp $HOME/.dotfiles/zsh/fonts/* $HOME/.local/share/fonts/
-fc-cache -f -v
+
 
