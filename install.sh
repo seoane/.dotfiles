@@ -91,7 +91,7 @@ custom_install "nodejs"
 custom_install "npm"
 
 # Install commitizen
-npm install -g commitizen
+sudo npm install -g commitizen
 
 # Install oh-my-zsh
 echo "Installing oh-my-zsh"
