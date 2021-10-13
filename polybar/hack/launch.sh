@@ -2,7 +2,7 @@
 
 # Add this script to your wm startup file.
 
-DIR="$HOME/.config/polybar/hack"
+DIR="$HOME/.polybar/hack"
 
 # Terminate already running bar instances
 killall -q polybar

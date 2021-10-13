@@ -2,7 +2,7 @@
 
 # Credits to Skardian for this abstraction script
 if which rofi; then
-    exec rofi -matching fuzzy -show run -fg "#00cd00" -bg "#333333" -hlfg "#ffffff" -hlbg "#336699" -font "Dejavu Sans Mono 26" -modi "run,window"
+    exec rofi -no-config -no-lazy-grab -show drun -modi drun -theme ~/.polybar/hack/scripts/rofi/launcher.rasi 
 elif which dmenu; then
     exec dmenu
 else

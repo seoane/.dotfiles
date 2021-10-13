@@ -84,14 +84,7 @@ custom_install "rofi"
 # Installing Polybar
 custom_install "polybar"
 
-# Install Node
-custom_install "nodejs"
-
-# Install npm
-custom_install "npm"
-
-# Install commitizen
-sudo npm install -g commitizen
+# Install NVM & Node
 
 # Install oh-my-zsh
 echo "Installing oh-my-zsh"
@@ -128,7 +121,8 @@ for f in $FILES; do
     FILE="$HOME/.$f"
     ln -sf $DOT_DIR/$f $FILE;
 done
-
+# Un-disable bitmap fonts
+sudo rm /etc/fonts/conf.d/70-no-bitmaps.conf
 # Install Fonts
 FDIR="$HOME/.local/share/fonts"
 echo -e "\n[*] Installing fonts..."

@@ -17,3 +17,11 @@ alias vim='nvim'
 
 # Git Commitizen
 alias gcz='git cz'
+
+#alias for central-speakers
+alias audio-hdmi-central='pacmd set-card-profile 0 output:hdmi-stereo-extra1' 
+#alias for left-speakers
+alias audio-hdmi-left='pacmd set-card-profile 0 output:hdmi-stereo' 
+#alias for laptop-speakers
+alias audio-laptop='pacmd set-card-profile 0 output:analog-stereo' 
+
