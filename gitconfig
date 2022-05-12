@@ -29,8 +29,14 @@
 [commit]
   verbose          = true
 [credential]
-  helper = cache --timeout 28800
-  UseHttpPath = true
+    username = jseoan3
+	helper = cache --timeout 3600
+    UseHttpPath = true
+[credential "https://bitbucket.org"]
+    username = jseoan3
+    helper = cache --timeout 3600
 [user]
-  email = suso.seoane@keepler.io
-
+	email = jseoan3@mapfre.net
+	name = jseoan3
+[pull]
+	rebase = true

@@ -180,11 +180,11 @@ exec i3-config-wizard
 bindsym $mod+space exec --no-startup-id ~/.dotfiles/bin/i3launcher
 
 bindsym $mod+Shift+t exec --no-startup-id synclient TouchpadOff=$((! $(synclient -l | grep TouchpadOff | awk '{print $3}')))
-bindsym Control+Mod1+l exec --no-startup-id ~/.dotfiles/bin/lock/lock -p
-bindsym Control+Mod1+s exec --no-startup-id scrot
+bindsym $mod+Control+l exec --no-startup-id ~/.dotfiles/bin/i3lock
+bindsym Control+$mod+s exec --no-startup-id shutter -s
 
 exec --no-startup-id ~/.polybar/launch.sh --hack
-exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper.jpg
+exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper.png
 exec --no-startup-id xrandr --output eDP-1 --mode 1920x1080 --pos 3840x0 --rotate normal --output DP-1 --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-1 --off --output DP-2 --off --output HDMI-2 --primary --mode 1920x1080 --pos 1920x0 --rotate normal
 
 focus_follows_mouse no
